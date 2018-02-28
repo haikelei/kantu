@@ -1,9 +1,11 @@
 package model;
 
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "model_detail", schema = "xianliao", catalog = "")
+
 public class ModelDetailEntity {
     private int modelId;
     private String modelName;
@@ -18,6 +20,7 @@ public class ModelDetailEntity {
     private String modelMotto;
     private Integer modelFollowed;
 
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
     @Column(name = "model_id")
     public int getModelId() {

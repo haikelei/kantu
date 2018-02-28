@@ -24,4 +24,5 @@
 
 
     <bean id="exceptionMap" class="exception.ExceptionMap" scope="singleton"  init-method="init"></bean>
+    <bean id="application" class="init.Application" scope="singleton"  init-method="init"></bean>
 </beans>

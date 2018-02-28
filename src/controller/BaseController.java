@@ -9,7 +9,7 @@ public class BaseController {
 
     public BaseController() {
         responseEntity = new ResponseEntity();
-        responseEntity.setCode(200);
+        responseEntity.setCode(0);
         responseEntity.setMsg(null);
     }
 

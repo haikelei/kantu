@@ -9,10 +9,11 @@
     <property name="connection.username">lujialei</property>
     <property name="connection.password">123</property>
 
-
     <!-- DB schema will be updated if needed -->
     <property name="hbm2ddl.auto">update</property>
     <mapping class="model.ModelDetailEntity"></mapping>
+    <mapping resource="model/ModelDetailEntity.hbm.xml"/>
+
   </session-factory>
 
 

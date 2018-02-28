@@ -14,6 +14,10 @@ public class ResAddModel {
     private int id;
     private String name;
 
+    public ResAddModel(boolean result) {
+        this.result = result;
+    }
+
     public ResAddModel(ModelDetailEntity entity) {
         if(entity != null){
             this.result = true;
