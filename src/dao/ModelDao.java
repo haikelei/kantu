@@ -18,12 +18,11 @@ public class ModelDao {
 
     public ModelDetailEntity addModel(ModelDetailEntity entity) {
         try{
-            Configuration cfg = new Configuration();
-            SessionFactory sf = cfg.configure().buildSessionFactory(); // 加载配置文件去构建Session工厂
-            Session session = sf.openSession();
+            Session session = HibernateUtil.getSession();
             Transaction transaction = session.beginTransaction();
             Serializable result = session.save(entity);
             transaction.commit();
+            System.out.println("======"+entity.getModelId());
             int modelId = (Integer) result;
             Transaction quary = session.beginTransaction();
             ModelDetailEntity quaryResult = session.get(ModelDetailEntity.class, modelId);

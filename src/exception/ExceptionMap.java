@@ -9,6 +9,8 @@ public class ExceptionMap {
     public static final int ERROR_CODE_10002 = 10002;
     public static final int ERROR_CODE_10003 = 10003;
     public static final int ERROR_CODE_10004 = 10004;
+    public static final int ERROR_CODE_10005 = 10005;
+    public static final int ERROR_CODE_10006 = 10006;
 
 
 
@@ -30,6 +32,14 @@ public class ExceptionMap {
         exceptionMap.put(ERROR_CODE_10002,"找不到该模特信息");
         exceptionMap.put(ERROR_CODE_10003,"更新模特信息视频失败");
         exceptionMap.put(ERROR_CODE_10004,"查询失败");
+        exceptionMap.put(ERROR_CODE_10005,"创建图集失败");
+        exceptionMap.put(ERROR_CODE_10005,"插入图片失败");
+
+
+
+
+
+
     }
 
     public static String getMsg(int errorCode){

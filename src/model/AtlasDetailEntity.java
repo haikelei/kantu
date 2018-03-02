@@ -5,8 +5,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "atlas_detail", schema = "xianliao", catalog = "")
 public class AtlasDetailEntity {
-    private int index;
-    private Integer atlasId;
+    private int atlasId;
     private Integer modelId;
     private String atlasCover;
     private String atlasTitle;
@@ -16,23 +15,14 @@ public class AtlasDetailEntity {
     private Integer atlasDownload;
     private Integer atlasCount;
 
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
-    @Column(name = "index")
-    public int getIndex() {
-        return index;
-    }
-
-    public void setIndex(int index) {
-        this.index = index;
-    }
-
-    @Basic
     @Column(name = "atlas_id")
-    public Integer getAtlasId() {
+    public int getAtlasId() {
         return atlasId;
     }
 
-    public void setAtlasId(Integer atlasId) {
+    public void setAtlasId(int atlasId) {
         this.atlasId = atlasId;
     }
 
@@ -121,28 +111,26 @@ public class AtlasDetailEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        AtlasDetailEntity that = (AtlasDetailEntity) o;
+        AtlasDetailEntity entity = (AtlasDetailEntity) o;
 
-        if (index != that.index) return false;
-        if (atlasId != null ? !atlasId.equals(that.atlasId) : that.atlasId != null) return false;
-        if (modelId != null ? !modelId.equals(that.modelId) : that.modelId != null) return false;
-        if (atlasCover != null ? !atlasCover.equals(that.atlasCover) : that.atlasCover != null) return false;
-        if (atlasTitle != null ? !atlasTitle.equals(that.atlasTitle) : that.atlasTitle != null) return false;
-        if (atlasDes != null ? !atlasDes.equals(that.atlasDes) : that.atlasDes != null) return false;
-        if (atlasTime != null ? !atlasTime.equals(that.atlasTime) : that.atlasTime != null) return false;
-        if (atlasCollected != null ? !atlasCollected.equals(that.atlasCollected) : that.atlasCollected != null)
+        if (atlasId != entity.atlasId) return false;
+        if (modelId != null ? !modelId.equals(entity.modelId) : entity.modelId != null) return false;
+        if (atlasCover != null ? !atlasCover.equals(entity.atlasCover) : entity.atlasCover != null) return false;
+        if (atlasTitle != null ? !atlasTitle.equals(entity.atlasTitle) : entity.atlasTitle != null) return false;
+        if (atlasDes != null ? !atlasDes.equals(entity.atlasDes) : entity.atlasDes != null) return false;
+        if (atlasTime != null ? !atlasTime.equals(entity.atlasTime) : entity.atlasTime != null) return false;
+        if (atlasCollected != null ? !atlasCollected.equals(entity.atlasCollected) : entity.atlasCollected != null)
             return false;
-        if (atlasDownload != null ? !atlasDownload.equals(that.atlasDownload) : that.atlasDownload != null)
+        if (atlasDownload != null ? !atlasDownload.equals(entity.atlasDownload) : entity.atlasDownload != null)
             return false;
-        if (atlasCount != null ? !atlasCount.equals(that.atlasCount) : that.atlasCount != null) return false;
+        if (atlasCount != null ? !atlasCount.equals(entity.atlasCount) : entity.atlasCount != null) return false;
 
         return true;
     }
 
     @Override
     public int hashCode() {
-        int result = index;
-        result = 31 * result + (atlasId != null ? atlasId.hashCode() : 0);
+        int result = atlasId;
         result = 31 * result + (modelId != null ? modelId.hashCode() : 0);
         result = 31 * result + (atlasCover != null ? atlasCover.hashCode() : 0);
         result = 31 * result + (atlasTitle != null ? atlasTitle.hashCode() : 0);

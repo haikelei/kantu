@@ -17,7 +17,7 @@ import utils.JsonUtils;
 @Controller
 public class ModelController extends BaseController {
 
-    @RequestMapping(value = "add",method = RequestMethod.POST)
+    @RequestMapping(value = "/add",method = RequestMethod.POST)
     @ResponseBody
     public String addModel(@RequestBody ModelParam param){
         System.out.println(param.toString());
@@ -33,7 +33,7 @@ public class ModelController extends BaseController {
         }
     }
 
-    @RequestMapping(value = "delete",method = RequestMethod.POST)
+    @RequestMapping(value = "/delete",method = RequestMethod.POST)
     @ResponseBody
     public String deleteModel(@RequestBody ModelDeleteParam param){
         System.out.println("==="+param.toString());
@@ -51,7 +51,7 @@ public class ModelController extends BaseController {
     }
 
 
-    @RequestMapping(value = "update",method = RequestMethod.POST)
+    @RequestMapping(value = "/update",method = RequestMethod.POST)
     @ResponseBody
     public String updateModel(@RequestBody ModelUpdateParam param){
         System.out.println("==="+param.toString());

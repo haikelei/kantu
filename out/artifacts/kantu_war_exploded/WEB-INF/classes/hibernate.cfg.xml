@@ -11,8 +11,17 @@
 
     <!-- DB schema will be updated if needed -->
     <property name="hbm2ddl.auto">update</property>
+
     <mapping class="model.ModelDetailEntity"></mapping>
     <mapping resource="model/ModelDetailEntity.hbm.xml"/>
+
+    <mapping class="model.PicDetailEntity"></mapping>
+    <mapping resource="model/PicDetailEntity.hbm.xml"></mapping>
+
+    <mapping class="model.AtlasDetailEntity"></mapping>
+    <mapping resource="model/AtlasDetailEntity.hbm.xml"></mapping>
+
+
 
   </session-factory>
 

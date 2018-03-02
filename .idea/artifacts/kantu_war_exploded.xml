@@ -18,6 +18,7 @@
           <element id="library" level="project" name="Maven: com.squareup.okhttp3:okhttp:3.9.1" />
           <element id="library" level="project" name="Maven: com.squareup.okio:okio:1.13.0" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.25" />
+          <element id="library" level="project" name="Maven: com.qiniu:qiniu-java-sdk:7.2.11" />
         </element>
       </element>
     </root>

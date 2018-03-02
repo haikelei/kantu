@@ -1,6 +1,9 @@
 package utils;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.boot.MetadataSources;
+import org.hibernate.boot.registry.StandardServiceRegistry;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 
 public final class HibernateUtil {
@@ -11,9 +14,11 @@ public final class HibernateUtil {
     }
 
     static{
-        Configuration cfg = new Configuration();
-        cfg.configure();
-        sessionFactory = cfg.buildSessionFactory();
+//        StandardServiceRegistry serviceRegistry=new StandardServiceRegistryBuilder().configure().build();
+//        sessionFactory=new MetadataSources(serviceRegistry).buildMetadata().buildSessionFactory();
+        Configuration configuration = new Configuration().configure();
+        //创建SessionFactory实例
+        sessionFactory = configuration.buildSessionFactory();
     }
 
     public static SessionFactory getSessionFactory(){

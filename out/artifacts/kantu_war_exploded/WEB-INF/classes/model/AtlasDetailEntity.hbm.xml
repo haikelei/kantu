@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="model.AtlasDetailEntity" table="atlas_detail" schema="xianliao" dynamic-update="true">
+        <id name="atlasId" column="atlas_id">
+            <generator class="identity" />
+        </id>
+        <property name="modelId" column="model_id"/>
+        <property name="atlasCover" column="atlas_cover"/>
+        <property name="atlasTitle" column="atlas_title"/>
+        <property name="atlasDes" column="atlas_des"/>
+        <property name="atlasTime" column="atlas_time"/>
+        <property name="atlasCollected" column="atlas_collected"/>
+        <property name="atlasDownload" column="atlas_download"/>
+        <property name="atlasCount" column="atlas_count"/>
+    </class>
+</hibernate-mapping>

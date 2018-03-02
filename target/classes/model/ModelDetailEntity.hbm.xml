@@ -5,7 +5,9 @@
 <hibernate-mapping>
 
     <class name="model.ModelDetailEntity" table="model_detail" schema="xianliao" dynamic-update="true">
-        <id name="modelId" column="model_id"/>
+        <id name="modelId" column="model_id">
+            <generator class="identity" />
+        </id>
         <property name="modelName" column="model_name"/>
         <property name="modelAvatar" column="model_avatar"/>
         <property name="modelBackground" column="model_background"/>
