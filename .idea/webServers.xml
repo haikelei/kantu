@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="f8ff0132-48ef-49de-a765-f2d8af7cedfb" name="139.224.131.85" url="http://139.224.131.85">
+        <fileTransfer host="139.224.131.85" port="22" privateKey="$USER_HOME$/.ssh/lujialei.pem" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

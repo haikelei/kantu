@@ -13,10 +13,14 @@ import org.springframework.web.bind.annotation.*;
 import service.ModelService;
 import utils.JsonUtils;
 
+import javax.servlet.http.HttpServletResponse;
+import java.util.List;
+
 @RequestMapping(value = "/model",method = RequestMethod.POST,produces="application/json")
 @Controller
 public class ModelController extends BaseController {
 
+    @CrossOrigin(origins = "*", maxAge = 3600)
     @RequestMapping(value = "/add",method = RequestMethod.POST)
     @ResponseBody
     public String addModel(@RequestBody ModelParam param){
@@ -75,6 +79,23 @@ public class ModelController extends BaseController {
         System.out.println("==="+param.toString());
         try {
             ModelDetailEntity data = ModelService.getInstance().quaryModel(param);
+            setData(data);
+            setCode(0);
+            setMsg(null);
+            return getResponseString();
+        }catch (BaseException e){
+            setCode(e.getErrorCode());
+            setData(null);
+            return getResponseString();
+        }
+    }
+
+    @RequestMapping(value = "/list",method = RequestMethod.POST)
+    @ResponseBody
+    public String getList(HttpServletResponse response){
+        response.setHeader("Access-Control-Allow-Origin", "*");
+        try {
+            List<ModelDetailEntity> data = ModelService.getInstance().getModelList();
             setData(data);
             setCode(0);
             setMsg(null);

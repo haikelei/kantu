@@ -11,6 +11,7 @@ public class PicDetailEntity {
     private Integer indexInAtlas;
     private int index;
 
+
     @Basic
     @Column(name = "model_id")
     public Integer getModelId() {

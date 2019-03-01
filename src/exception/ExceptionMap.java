@@ -11,6 +11,14 @@ public class ExceptionMap {
     public static final int ERROR_CODE_10004 = 10004;
     public static final int ERROR_CODE_10005 = 10005;
     public static final int ERROR_CODE_10006 = 10006;
+    public static final int ERROR_CODE_10007 = 10007;
+    public static final int ERROR_CODE_10008 = 10008;
+    public static final int ERROR_CODE_10009 = 10009;
+    public static final int ERROR_CODE_10010 = 10010;
+    public static final int ERROR_CODE_10011 = 10011;
+    public static final int ERROR_CODE_10012 = 10012;
+    public static final int ERROR_CODE_10013 = 10013;
+    public static final int ERROR_CODE_10014 = 10014;
 
 
 
@@ -33,7 +41,15 @@ public class ExceptionMap {
         exceptionMap.put(ERROR_CODE_10003,"更新模特信息视频失败");
         exceptionMap.put(ERROR_CODE_10004,"查询失败");
         exceptionMap.put(ERROR_CODE_10005,"创建图集失败");
-        exceptionMap.put(ERROR_CODE_10005,"插入图片失败");
+        exceptionMap.put(ERROR_CODE_10006,"插入图片失败");
+        exceptionMap.put(ERROR_CODE_10007,"删除图集失败");
+        exceptionMap.put(ERROR_CODE_10008,"查询图集信息失败");
+        exceptionMap.put(ERROR_CODE_10009,"更新图集信息失败");
+        exceptionMap.put(ERROR_CODE_10010,"添加视频失败");
+        exceptionMap.put(ERROR_CODE_10011,"查询视频失败");
+        exceptionMap.put(ERROR_CODE_10012,"删除视频失败");
+        exceptionMap.put(ERROR_CODE_10013,"修改视频失败");
+        exceptionMap.put(ERROR_CODE_10014,"增加用户失败");
 
 
 

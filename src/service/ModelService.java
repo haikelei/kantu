@@ -10,6 +10,8 @@ import model.params.ModelUpdateParam;
 import model.responses.ResAddModel;
 import model.responses.UpdateModelData;
 
+import java.util.List;
+
 public class ModelService {
 
     private static ModelService instance;
@@ -56,5 +58,11 @@ public class ModelService {
         ModelDetailEntity entity = param.toModelDetailEntity();
         ModelDetailEntity data = dao.quaryModel(entity);
         return data;
+    }
+
+    public List<ModelDetailEntity>  getModelList() {
+        ModelDao dao = new ModelDao();
+        List<ModelDetailEntity> list =  dao.quaryAll();
+        return list;
     }
 }

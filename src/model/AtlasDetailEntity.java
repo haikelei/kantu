@@ -1,6 +1,7 @@
 package model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "atlas_detail", schema = "xianliao", catalog = "")
@@ -14,6 +15,10 @@ public class AtlasDetailEntity {
     private Integer atlasCollected;
     private Integer atlasDownload;
     private Integer atlasCount;
+    private int type;
+    public  String modelName;
+    public String modelAvatar;
+    public List<PicDetailEntity> pics;
 
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
@@ -106,6 +111,16 @@ public class AtlasDetailEntity {
         this.atlasCount = atlasCount;
     }
 
+    @Basic
+    @Column(name = "type")
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -114,6 +129,7 @@ public class AtlasDetailEntity {
         AtlasDetailEntity entity = (AtlasDetailEntity) o;
 
         if (atlasId != entity.atlasId) return false;
+        if (type != entity.type) return false;
         if (modelId != null ? !modelId.equals(entity.modelId) : entity.modelId != null) return false;
         if (atlasCover != null ? !atlasCover.equals(entity.atlasCover) : entity.atlasCover != null) return false;
         if (atlasTitle != null ? !atlasTitle.equals(entity.atlasTitle) : entity.atlasTitle != null) return false;
@@ -139,6 +155,7 @@ public class AtlasDetailEntity {
         result = 31 * result + (atlasCollected != null ? atlasCollected.hashCode() : 0);
         result = 31 * result + (atlasDownload != null ? atlasDownload.hashCode() : 0);
         result = 31 * result + (atlasCount != null ? atlasCount.hashCode() : 0);
+        result = 31 * result + type;
         return result;
     }
 }

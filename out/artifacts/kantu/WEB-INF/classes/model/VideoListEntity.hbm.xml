@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="model.VideoListEntity" table="video_list" schema="xianliao">
+        <id name="videoId" column="video_id">
+            <generator class="identity" />
+        </id>
+        <property name="videoUrl" column="video_url"/>
+        <property name="videoTitle" column="video_title"/>
+        <property name="videoZan" column="video_zan"/>
+        <property name="videoCollect" column="video_collect"/>
+        <property name="videoCover" column="video_cover"/>
+    </class>
+</hibernate-mapping>

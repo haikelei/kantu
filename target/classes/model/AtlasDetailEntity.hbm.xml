@@ -4,7 +4,7 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="model.AtlasDetailEntity" table="atlas_detail" schema="xianliao" dynamic-update="true">
+    <class name="model.AtlasDetailEntity" table="atlas_detail" schema="xianliao">
         <id name="atlasId" column="atlas_id">
             <generator class="identity" />
         </id>
@@ -16,5 +16,6 @@
         <property name="atlasCollected" column="atlas_collected"/>
         <property name="atlasDownload" column="atlas_download"/>
         <property name="atlasCount" column="atlas_count"/>
+        <property name="type" column="type"/>
     </class>
 </hibernate-mapping>

@@ -25,6 +25,7 @@ public class AddAtlasParam {
     private int collect;
     private int download;
     private List<ListBean> list;
+    public int type;
 
     public int getId() {
         return id;
@@ -105,6 +106,12 @@ public class AddAtlasParam {
             this.pic = pic;
         }
 
+        @Override
+        public String toString() {
+            return "ListBean{" +
+                    "pic='" + pic + '\'' +
+                    '}';
+        }
     }
 
 
@@ -118,6 +125,7 @@ public class AddAtlasParam {
         entity.setAtlasTime(time);
         entity.setAtlasTitle(title);
         entity.setAtlasCount(list.size());
+        entity.setType(type);
         return entity;
     }
 
@@ -128,10 +136,11 @@ public class AddAtlasParam {
                 ", cover='" + cover + '\'' +
                 ", title='" + title + '\'' +
                 ", des='" + des + '\'' +
-                ", time='" + time + '\'' +
-                ", collect='" + collect + '\'' +
-                ", download='" + download + '\'' +
+                ", time=" + time +
+                ", collect=" + collect +
+                ", download=" + download +
                 ", list=" + list +
+                ", type=" + type +
                 '}';
     }
 }

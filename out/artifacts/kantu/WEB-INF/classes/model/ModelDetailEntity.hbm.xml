@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="model.ModelDetailEntity" table="model_detail" schema="xianliao" dynamic-update="true">
+        <id name="modelId" column="model_id">
+            <generator class="identity" />
+        </id>
+        <property name="modelName" column="model_name"/>
+        <property name="modelAvatar" column="model_avatar"/>
+        <property name="modelBackground" column="model_background"/>
+        <property name="modelWeight" column="model_weight"/>
+        <property name="modelHeight" column="model_height"/>
+        <property name="modelWaistilne" column="model_waistilne"/>
+        <property name="modelBust" column="model_bust"/>
+        <property name="modelHipline" column="model_hipline"/>
+        <property name="modelCover" column="model_cover"/>
+        <property name="modelMotto" column="model_motto"/>
+        <property name="modelFollowed" column="model_followed"/>
+    </class>
+</hibernate-mapping>

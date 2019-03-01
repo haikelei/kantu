@@ -2,6 +2,7 @@ package model;
 
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "model_detail", schema = "xianliao", catalog = "")
@@ -19,6 +20,8 @@ public class ModelDetailEntity {
     private String modelCover;
     private String modelMotto;
     private Integer modelFollowed;
+    public List<AtlasDetailEntity> atlasList;
+
 
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Id

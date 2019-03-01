@@ -1,26 +1,28 @@
 package controller;
 
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.serializer.SerializerFeature;
-import model.ResponseEntity;
+import exception.ExceptionMap;
+import model.params.AddUserParam;
+import model.responses.AddAtlasResponse;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-import utils.JsonUtils;
+import org.springframework.web.bind.annotation.*;
+import service.UserService;
 
 @RequestMapping(value = "/user",method = RequestMethod.POST)
 @Controller
 public class UserController extends BaseController{
 
-    @RequestMapping(value = "/add")
+
+    @CrossOrigin(origins = "*", maxAge = 3600)
+    @RequestMapping(value = "/add",method = RequestMethod.POST)
     @ResponseBody
-    public String test(){
+    public String addUser(@RequestBody AddUserParam param){
         try{
+            boolean b = UserService.getInstance().addUser(param);
+            setData(new AddAtlasResponse(b));
             setCode(200);
         }catch (Exception e){
-            setCode(10000);
+            setCode(ExceptionMap.ERROR_CODE_10014);
             setMsg(e.getMessage());
         }finally {
             return getResponseString();
